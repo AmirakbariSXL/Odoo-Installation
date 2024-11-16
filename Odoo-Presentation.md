@@ -123,7 +123,7 @@ Odoo follows a **modular** and **MVC (Model-View-Controller)** architecture.
 
 ## Odoo in Action
 
-![Odoo Dashboard](https://www.odoo.com/web/image/website/odoo_logo.png) 
+
 
 ### Example Use Case: A Retail Business
 - **Sales**: Manage customer orders, generate invoices, and track payments.
