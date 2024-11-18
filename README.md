@@ -489,4 +489,30 @@ Once Odoo is running, you can access it in your web browser at `http://localhost
 
 ---
 
+### 13. **Database creation error**
+
+#### Error: `Database creation error: connection to server at "localhost" (::1), port 5432 failed: fe_sendauth: no password supplied`
+- **Cause**: The error is caused by the database connection details not being configured.
+- **Solution**:
+- simply edit the odoo.conf file and add the following lines, then configure them:
+  ```bash
+  db_host = localhost
+  db_port = 5432
+  db_user = database_user
+  db_password = user_password
+  ```
+- Replace database_user and user_password with the actual credentials.
+- After saving, restart Odoo.
+
+#### Error: `Database creation error: Access Denied`
+- **Cause**: The error is caused by the `Master Password` not being set correctly.
+- **Solution**:
+- Make sure that the user you have configured has the `Create db` privilege.
+- Instead of the Master Password, you need to enter the password you set during the initial setup.  
+- Alternatively, you can go to the `odoo.conf` file and change the value of `admin_passwd`.
+- After saving, restart Odoo.
+- And enter the password you entered in `admin_passwd` in `master password`.
+
+---
+
 These are some of the common challenges you may encounter during the Odoo 17 installation process. If you encounter errors not listed here, feel free to check the [Odoo Community Forum](https://www.odoo.com/forum/help-1) or the official [Odoo Documentation](https://www.odoo.com/documentation) for further assistance.
