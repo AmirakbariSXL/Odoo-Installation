@@ -160,7 +160,7 @@ cd /opt/odoo
 python3 -m venv odoo-venv
 source odoo-venv/bin/activate
 pip install --upgrade pip
-pip install -r https://www.odoo.com/requirements.txt
+pip install -r https://raw.githubusercontent.com/odoo/odoo/refs/heads/17.0/requirements.txt
 ```
 
 ### Step 6: Install Odoo
